@@ -3,7 +3,7 @@ using namespace std;
 
 unsigned long long int fib(int n)
 {
-    if (n == 0)
+    if (n == 0 || n == 1)
         return 0;
 
     if (n == 1 || n == 2)
