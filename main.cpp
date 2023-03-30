@@ -1,15 +1,27 @@
 #include <iostream>
 using namespace std;
 
-unsigned long long int fib(int n)
-{
-    if (n == 0 || n == 1)
-        return 0;
+void fib(int n) {
 
-    if (n == 1 || n == 2)
-        return 1;
+    int a1 = 0, a2 = 1, a3, i = 0;
 
-    return fib(n - 1) + fib(n - 2);
+    if (n == 0 || n == 1) {
+        cout << a1 << endl;
+    }
+
+    else if (n == 2) {
+        cout << a2 << endl;
+    }
+
+    else {
+        while (i < n) {
+            int a3 = a1 + a2;
+            cout << a1 << endl;
+            a1 = a2;
+            a2 = a3;
+            i++;
+        }
+    }
 }
 
 
@@ -21,6 +33,24 @@ int main() {
     int n;
     cout << "n = ";
     cin >> n;
-    unsigned long long int x = fib(n);
-    cout << "n-ый число Фибоначчи = " << x << endl;
+    cout << endl;
+
+    fib(n);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
